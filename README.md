@@ -2,7 +2,37 @@
 
 Testing https://github.com/gribnoysup/setup-polly-jest/issues/5
 
-## 0.5.2
+## Setup and Running
+
+Ensure you have [Node.js](https://nodejs.org/en/) `>= 12.10.x` and [yarn](https://yarnpkg.com/lang/en/) installed. Then:
+
+1. Clone the project
+2. Install dependencies:
+
+    ```shell
+    cd setup-polly-jest-constructor-error
+    yarn
+    ```
+3. Run the tests:
+
+    ```shell
+    yarn test
+    ```
+
+    Or run them individually:
+
+    ```shell
+    # 0.5.2
+    yarn jest setup-polly-jest-0.5.2/index.test.js
+    # ...
+
+    # 0.5.3-issue-5.0
+    yarn jest setup-polly-jest-0.5.3-issue-5.0/index.test.js
+    ```
+
+## Output
+
+### 0.5.2
 
 ```shell
 $ yarn --silent jest setup-polly-jest-0.5.2/index.test.js
@@ -41,7 +71,7 @@ Ran all test suites matching /setup-polly-jest-0.5.2\/index.test.js/i.
 error Command failed with exit code 1.
 ```
 
-## 0.5.3-issue-5.0
+### 0.5.3-issue-5.0
 
 ```shell
 $ yarn --silent jest setup-polly-jest-0.5.3-issue-5.0/index.test.js
