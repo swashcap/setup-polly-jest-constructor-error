@@ -1,0 +1,10 @@
+{
+  "name": "setup-polly-jest-constructor-error",
+  "version": "1.0.0",
+  "description": "Testing https://github.com/gribnoysup/setup-polly-jest/issues/5",
+  "main": "index.js",
+  "repository": "git@github.com:swashcap/setup-polly-jest-constructor-error.git",
+  "author": "Cory Reed",
+  "license": "Apache-2.0",
+  "private": true
+}
