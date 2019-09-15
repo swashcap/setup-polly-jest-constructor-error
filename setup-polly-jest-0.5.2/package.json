@@ -1,0 +1,9 @@
+{
+  "name": "setup-polly-jest-0.5.2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "setup-polly-jest": "0.5.2"
+  },
+  "license": "Apache-2.0"
+}
