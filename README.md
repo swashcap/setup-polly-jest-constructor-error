@@ -71,28 +71,38 @@ Ran all test suites matching /setup-polly-jest-0.5.2\/index.test.js/i.
 error Command failed with exit code 1.
 ```
 
-### 0.5.3-issue-5.0
+### 0.5.3-issue-5.2
 
 ```shell
-$ yarn --silent jest setup-polly-jest-0.5.3-issue-5.0/index.test.js
- FAIL  setup-polly-jest-0.5.3-issue-5.0/index.test.js
-  ● Test suite failed to run
+$ yarn --silent jest setup-polly-jest-0.5.3-issue-5.2/index.test.js
+ FAIL  setup-polly-jest-0.5.3-issue-5.2/index.test.js
+  sample
+    ✕ assertion (120ms)
 
-    Cannot find module 'core-js/modules/es.symbol.description' from 'setupJasmine.js'
+  ● sample › assertion
 
-    However, Jest was able to find:
-    	'lib/setupJasmine.js'
+    PollyError: [Polly] Persister matching the name `fs-whoops` was not registered.
 
-    You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['js', 'json', 'jsx', 'ts', 'tsx', 'node'].
+      at Object.assert (node_modules/@pollyjs/utils/src/utils/assert.js:5:11)
 
-    See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+  ● sample › assertion
 
-      at Resolver.resolveModule (node_modules/jest-resolve/build/index.js:259:17)
+    TypeError: Cannot read property 'configure' of null
+
+      27 |
+      28 |   test("assertion", async () => {
+    > 29 |     context.polly.configure({
+         |                   ^
+      30 |       recordIfMissing: true
+      31 |     });
+      32 |
+
+      at Object.configure (setup-polly-jest-0.5.3-issue-5.2/index.test.js:29:19)
 
 Test Suites: 1 failed, 1 total
-Tests:       0 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        0.546s
-Ran all test suites matching /setup-polly-jest-0.5.3-issue-5.0\/index.test.js/i.
+Time:        1.578s
+Ran all test suites matching /setup-polly-jest-0.5.3-issue-5.2\/index.test.js/i.
 error Command failed with exit code 1.
 ```
