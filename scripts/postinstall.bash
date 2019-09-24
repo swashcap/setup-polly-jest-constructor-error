@@ -1,7 +1,9 @@
 #!/bin/bash
 set -eo pipefail
 
-yarn install --cwd "$PWD/setup-polly-jest-0.5.2" --prefer-offline --silent &
-yarn install --cwd "$PWD/setup-polly-jest-0.5.3-issue-5.2" --prefer-offline --silent &
+for dir in setup-polly-jest*/; do
+  yarn install --cwd "$dir" --prefer-offline --silent &
+done
+
 wait
 

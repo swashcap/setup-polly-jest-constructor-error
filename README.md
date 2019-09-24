@@ -36,9 +36,9 @@ Ensure you have [Node.js](https://nodejs.org/en/) `>= 12.10.x` and [yarn](https:
 
 ```shell
 $ yarn --silent jest setup-polly-jest-0.5.2/index.test.js
-(node:59450) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'stop' of null
-(node:59450) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
-(node:59450) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:3355) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'stop' of null
+(node:3355) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:3355) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
  FAIL  setup-polly-jest-0.5.2/index.test.js
   sample
     ✕ assertion (91ms)
@@ -66,7 +66,7 @@ $ yarn --silent jest setup-polly-jest-0.5.2/index.test.js
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        0.658s, estimated 1s
+Time:        0.655s, estimated 1s
 Ran all test suites matching /setup-polly-jest-0.5.2\/index.test.js/i.
 error Command failed with exit code 1.
 ```
@@ -74,16 +74,10 @@ error Command failed with exit code 1.
 ### 0.5.3-issue-5.2
 
 ```shell
-$ yarn --silent jest setup-polly-jest-0.5.3-issue-5.2/index.test.js
- FAIL  setup-polly-jest-0.5.3-issue-5.2/index.test.js
+$ yarn --silent jest setup-polly-jest-0.5.3-issue-5.4/index.test.js
+ FAIL  setup-polly-jest-0.5.3-issue-5.4/index.test.js
   sample
-    ✕ assertion (120ms)
-
-  ● sample › assertion
-
-    PollyError: [Polly] Persister matching the name `fs-whoops` was not registered.
-
-      at Object.assert (node_modules/@pollyjs/utils/src/utils/assert.js:5:11)
+    ✕ assertion (85ms)
 
   ● sample › assertion
 
@@ -97,12 +91,18 @@ $ yarn --silent jest setup-polly-jest-0.5.3-issue-5.2/index.test.js
       31 |     });
       32 |
 
-      at Object.configure (setup-polly-jest-0.5.3-issue-5.2/index.test.js:29:19)
+      at Object.configure (setup-polly-jest-0.5.3-issue-5.4/index.test.js:29:19)
+
+  ● sample › assertion
+
+    PollyError: [Polly] Persister matching the name `fs-whoops` was not registered. Check `setupPolly` method and make sure it's configured correctly.
+
+      at Object.assert (node_modules/@pollyjs/utils/src/utils/assert.js:5:11)
 
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.578s
-Ran all test suites matching /setup-polly-jest-0.5.3-issue-5.2\/index.test.js/i.
+Time:        0.623s, estimated 2s
+Ran all test suites matching /setup-polly-jest-0.5.3-issue-5.4\/index.test.js/i.
 error Command failed with exit code 1.
 ```
