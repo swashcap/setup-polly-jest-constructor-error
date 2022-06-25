@@ -12,7 +12,7 @@
     "@pollyjs/core": "^2.6.2",
     "@pollyjs/persister-fs": "^2.6.2",
     "jest": "^24.9.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "prettier": "^1.18.2"
   },
   "scripts": {
